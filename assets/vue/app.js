@@ -20,6 +20,7 @@ var PagePortfolioComponent = Vue.component('page-portfolio', {
     },
     template: `
         <div>
+            <page-memories></page-memories>
             <template v-if="loading">
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -27,6 +28,7 @@ var PagePortfolioComponent = Vue.component('page-portfolio', {
                     </div>
                 </div>
             </template>
+            <div id="portfolio"></div>
             <template v-if="!loading" v-for="(entry, index) in entries">
                 <portfolio-entry :entry-id="index" :entry-title="entry.title" :entry-images="entry.images" :entryDescription="entry.shortDescription" :entryMovie="entry.movie"/>
             </template>
@@ -86,6 +88,8 @@ var PageAboutComponent = Vue.component('page-about', {
         });
     },
     template: `
+      <div>
+        <page-memories></page-memories>
     		<section class="awe-section bg-gray">
 					<div class="container">
 						<div class="row">
@@ -111,8 +115,9 @@ var PageAboutComponent = Vue.component('page-about', {
 							</div>
 						</div>
 					</div>
-				</section>
-			`
+        </section>
+      </div>
+    `
 });
 
 var PageContactComponent = Vue.component('page-contact', {
@@ -146,11 +151,35 @@ Vue.component('contact-form', {
         email: "",
         subject: "",
         text: "",
+        isSending: false,
+        isSuccess: false,
+        isError: false,
     }),
     methods: {
         submit(e) {
-            console.log(this.name, this.email, this.subject, this.text, "HELLO");
-
+            this.isSending = true;
+            var url = 'https://agatales.pl/mail';
+            var data = {
+              "from": this.email,
+              "subject": this.subject,
+              "content": `Message from: ${this.name}\nContent: ${this.text}`,
+            };
+            fetch(url, {
+              method: "POST",
+              body: JSON.stringify(data),
+              headers: {
+                'Content-Type': 'application/json',
+              }
+            }).then(response => response.json()).then(data => {
+              if(data.status !== 'OK') {
+                this.isSending = false;
+                this.isError = true;
+                return;
+              }
+              this.isSending = false;
+              this.isSuccess = true;
+            });
+            
             e.preventDefault();
             return false;
         }
@@ -163,12 +192,12 @@ Vue.component('contact-form', {
                 <div class="contact">
                   <div class="contact__icon"><i class="pe-7s-note"></i></div>
                   <h3 class="contact__title">address</h3>
-                  <div class="contact__text">Nam suscipit nisi risus, et porttitor metus molest</div>
+                  <div class="contact__text">Wrocław, Poland</div>
                 </div>
                 <div class="contact">
                   <div class="contact__icon"><i class="pe-7s-back"></i></div>
                   <h3 class="contact__title">call us</h3>
-                  <div class="contact__text">+1-202-555-0177</div>
+                  <div class="contact__text"><a href="tel:+48609282420">+48 609 282 420</a></div>
                 </div>
                 <div class="contact">
                   <div class="contact__icon"><i class="pe-7s-voicemail"></i></div>
@@ -176,8 +205,11 @@ Vue.component('contact-form', {
                   <div class="contact__text"><a href="mailto:hello@agatales.pl">hello@agatales.pl</a></div>
                 </div>
               </div>
-              <div class="col-md-7 col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1 ">
-                <form @submit="submit($event)">
+              <div class="col-md-7 col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1">
+                <div v-if="isError" class="bg-danger">
+                    Ups... something went wrong. Please use the email address on the left.
+                  </div>
+                <form @submit="submit($event)" v-if="!isSending && !isSuccess">
                     <div class="form-wrapper">
                       <div class="form-item form-item--half">
                         <input class="form-control" type="text" name="input" placeholder="Your name" v-model="name"/>
@@ -198,6 +230,12 @@ Vue.component('contact-form', {
                       </div>
                     </div>
                   </form>
+                  <div v-if="isSending" class="bg-info">
+                    Sending...
+                  </div>
+                  <div v-if="isSuccess" class="bg-success">
+                    Yeah... you did it!
+                  </div>
                 </div>
               </div>
             </div>
@@ -263,7 +301,12 @@ Vue.component('page-header', {
     template: `
 			<header class="header header--fixed">
 				<div class="header__inner">
-					<div class="header__logo"><a href="index.html"><img src="assets/img/logo.png" alt="" style="width: 122px;"/></a></div>
+					<div class="header__logo">
+              <a style="margin-right: 10px" class="social-icon" href="https://www.linkedin.com/in/agata-les/" target="_blank"><i class="social-icon__icon fa fa-2x fa-linkedin"></i></a>
+              <a style="margin-right: 10px"  class="social-icon" href="https://github.com/Agata-Les" target="_blank"><i class="social-icon__icon fa fa-2x fa-github"></i></a>
+              <a style="margin-right: 20px"  class="social-icon" href="mailto:hello@agatales.pl"><i class="social-icon__icon fa fa-2x fa-envelope"></i></a>
+              <a href="mailto:hello@agatales.pl">hello@agatales.pl</a>
+          </div>
 					<div class="navbar-toggle" id="fs-button">
 						<div class="navbar-icon"><span></span></div>
 					</div>
@@ -278,7 +321,7 @@ Vue.component('page-header', {
 							  <router-link to="/about">About</router-link>
 							</li>
 							<li>
-							  <router-link to="/work">Work</router-link>
+							  <router-link to="/#portfolio">Work</router-link>
 							</li>
 							<li>
 							  <router-link to="/contact">Contact</router-link>
@@ -321,13 +364,13 @@ Vue.component('page-footer', {
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6 col-lg-6 ">
-							<p class="footer__coppy">2019 &copy; Copyright <a href="http://awe7.com/">Awe7</a>. All rights Reserved.</p>
+							<p class="footer__coppy">2019 &copy; Copyright <a href="https://agatales.pl">Agata Leś</a>. All rights reserved.</p>
 						</div>
 						<div class="col-md-6 col-lg-6 ">
 							<div class="footer__social">			
-								<a class="social-icon" href="#"><i class="social-icon__icon fa fa-linkedin"></i></a>
-								<a class="social-icon" href="#"><i class="social-icon__icon fa fa-github"></i></a>
-								<a class="social-icon" href="mailto:hello@agatales.pl"><i class="social-icon__icon fa fa-envelope"></i></a>
+								<a class="social-icon" href="https://www.linkedin.com/in/agata-les/" target="_blank"><i class="social-icon__icon fa fa-2x fa-linkedin"></i></a>
+								<a class="social-icon" href="https://github.com/Agata-Les" target="_blank"><i class="social-icon__icon fa fa-2x fa-github"></i></a>
+								<a class="social-icon" href="mailto:hello@agatales.pl"><i class="social-icon__icon fa fa-2x fa-envelope"></i></a>
 							</div>
 						</div>
 					</div>
@@ -343,7 +386,17 @@ const routes = [
 ];
 
 const router = new window.VueRouter({
-  routes // short for `routes: routes`
+  routes: routes,
+  mode: "history",
+  scrollBehavior: function(to) {
+    if(to.hash) {
+      console.log(to);
+      return {
+        selector: to.hash
+      };
+    }
+    return {x: 0, y: 0};
+  }
 });
 
 var app = new Vue({

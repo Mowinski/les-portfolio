@@ -835,7 +835,7 @@ ul {
 
 .fullscreenmenu__module {
     position: fixed;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0);
     top: 0;
     left: 0;
     right: 0;
@@ -2190,7 +2190,6 @@ ul {
     font-size: 12px;
     color: #333;
     text-align: center;
-    border: 1px solid #ebebeb;
     transition: all .3s ease;
 }
 
@@ -2836,4 +2835,21 @@ ul {
 }
 .image-entry-second-row {
     margin-top: 40px;
+}
+
+
+.bg-success {
+    background-color: #dff0d8;
+    padding: 10px;
+    margin: 10px;
+}
+.bg-info {
+    background-color: #d9edf7;
+    padding: 10px;
+    margin: 10px;
+}
+.bg-danger {
+    background-color: #f2dede;
+    padding: 10px;
+    margin: 10px;
 }
