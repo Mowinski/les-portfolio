@@ -2818,3 +2818,22 @@ ul {
     color: #333;
     margin-bottom: 20px;
 }
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-entry img {
+    width: 250px;
+    height: 180px;
+}
+.image-entry-second-row {
+    margin-top: 40px;
+}
