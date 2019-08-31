@@ -30,7 +30,8 @@ var PagePortfolioComponent = Vue.component('page-portfolio', {
             </template>
             <div id="portfolio"></div>
             <template v-if="!loading" v-for="(entry, index) in entries">
-                <portfolio-entry :entry-id="index" :entry-title="entry.title" :entry-images="entry.images" :entryDescription="entry.shortDescription" :entryMovie="entry.movie"/>
+                <portfolio-entry :entry-id="index" :entry-title="entry.title" :entry-images="entry.images" :entryDescription="entry.shortDescription" :entryMovie="entry.movie" :entryUrl="entry.url"/>
+                <hr/>
             </template>
         </div>
     `
@@ -245,21 +246,24 @@ Vue.component('contact-form', {
 });
 
 Vue.component('portfolio-entry', {
-    props: ['entryId', 'entryTitle', 'entryImages', 'entryDescription', "entryMovie"],
+    props: ['entryId', 'entryTitle', 'entryImages', 'entryDescription', "entryMovie", "entryUrl"],
     template: `
         <section class="awe-section bg-gray">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">{{ entryTitle }}</div>
-                </div>
-                <div class="row">
                     <div class="col-md-12">
-                        {{ entryDescription }}
+                        <h2 class="page-title__title">{{ entryTitle }}</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-offset-10 col-md-2">
-                        <button class="btn md-btn--primary">Read more</button>
+                    <div class="col-md-12" v-html="entryDescription">
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 1rem; margin-bottom: 1rem">
+                    <div class="col-md-offset-10 col-md-2" style="text-align: right;">
+							          <router-link v-bind:to="entryUrl">
+                            <button class="btn md-btn--primary">Read more</button>
+                        </router-link>
                     </div>
                 </div>
                 
@@ -379,10 +383,199 @@ Vue.component('page-footer', {
   `
 });
 
+const TankObsessionComponent = Vue.component('tank-obsession', {
+  template: `
+      <div class="wil-content">
+        <section class="awe-section">
+          <div class="container">
+            <div class="page-title pb-40">
+              <h2 class="page-title__title">Tank Obsession</h2>
+              <div class="post-detail__meta">
+                <span class="author">by Agata Leś</span>
+              </div>
+              <div class="page-title__divider"></div>
+            </div>            
+          </div>
+        </section>
+        <section class="awe-section bg-gray">
+          <div class="container">
+            <div>
+              <div class="post-detail__media">
+                <img src="https://picsum.photos/id/10/1600/768" class="img-responsive" alt=""/>
+              </div>
+              <div class="post-detail__entry row">
+                <div class="col-md-12">
+                  <h5>Vivamus eget vulputate risus. Aliquam id fringilla lacus, vitae maximus felis. Suspendisse in posuere urna. Ut ipsum nisi, suscipit at nisl nec, pulvinar dapibus risus. Etiam non hendrerit nulla, in volutpat dui.</h5>
+                  <p>In nec porttitor nisi. Nunc at egestas ante. Sed vestibulum velit eu nibh commodo, non fermentum libero pellentesque. Fusce sed posuere ex, non ultrices nibh. <b>Fusce quis leo non ex rutrum convallis non ut ante.</b> Phasellus hendrerit ante nec est porta, et elementum massa euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et quam facilisis, posuere justo ut, maximus nulla. Quisque id fermentum tortor. Duis sem mi, luctus sed luctus eget, viverra et ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec faucibus imperdiet porttitor. Etiam fringilla ligula et porttitor tristique.</p>
+                
+                  <p>Donec quis molestie magna. Sed mattis ac nunc sit amet scelerisque. Curabitur a aliquam sem. Suspendisse condimentum elementum eros, a vehicula tortor ornare sit amet. Donec ac commodo enim, eget mattis ipsum.</p>
+                  <p>In vestibulum vestibulum suscipit. Phasellus velit felis, imperdiet quis dolor ut, aliquet iaculis mauris. Pellentesque consectetur placerat suscipit. Donec quis hendrerit eros. Mauris sed leo aliquet, feugiat magna et, feugiat mauris. Integer a nunc eu risus ultrices euismod. Pellentesque at dictum turpis. Fusce sed mauris lorem. Nam condimentum odio diam, vitae congue sapien mollis vitae. Pellentesque nulla est, dapibus finibus sapien in, euismod dapibus diam.</p>
+                  <p>In dictum, magna non suscipit volutpat, ligula ligula scelerisque purus, et dapibus ipsum enim quis nisi. Sed eget faucibus velit. Integer in felis consequat, aliquam neque vitae, pellentesque nibh. Donec id lobortis risus, at finibus tortor. Praesent consequat elementum tristique. Sed dictum quis magna a consequat. Maecenas id malesuada sem. Phasellus pharetra odio purus, sit amet commodo tortor mollis ac. Donec gravida aliquet tellus.</p>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-offset-10 col-md-2" style="text-align: right;">
+                  <router-link to="/">
+                    <button class="md-btn--info md-btn--round">Back</button>
+                  </router-link>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+  `
+});
+
+const JasperRunnerComponent = Vue.component('jasper-runner', {
+  template: `
+    <div class="wil-content">
+        <section class="awe-section">
+          <div class="container">
+            <div class="page-title pb-40">
+              <h2 class="page-title__title">Jasper runner</h2>
+              <div class="post-detail__meta">
+                <span class="author">by Agata Leś</span>
+              </div>
+              <div class="page-title__divider"></div>
+            </div>            
+          </div>
+        </section>
+        <section class="awe-section bg-gray">
+          <div class="container">
+            <div>
+              <div class="post-detail__media">
+                <img src="https://picsum.photos/id/20/1600/768" class="img-responsive" alt=""/>
+              </div>
+              <div class="post-detail__entry row">
+                <div class="col-md-12">
+                  <h5>Vivamus eget vulputate risus. Aliquam id fringilla lacus, vitae maximus felis. Suspendisse in posuere urna. Ut ipsum nisi, suscipit at nisl nec, pulvinar dapibus risus. Etiam non hendrerit nulla, in volutpat dui.</h5>
+                  <p>In nec porttitor nisi. Nunc at egestas ante. Sed vestibulum velit eu nibh commodo, non fermentum libero pellentesque. Fusce sed posuere ex, non ultrices nibh. <b>Fusce quis leo non ex rutrum convallis non ut ante.</b> Phasellus hendrerit ante nec est porta, et elementum massa euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et quam facilisis, posuere justo ut, maximus nulla. Quisque id fermentum tortor. Duis sem mi, luctus sed luctus eget, viverra et ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec faucibus imperdiet porttitor. Etiam fringilla ligula et porttitor tristique.</p>
+                
+                  <p>Donec quis molestie magna. Sed mattis ac nunc sit amet scelerisque. Curabitur a aliquam sem. Suspendisse condimentum elementum eros, a vehicula tortor ornare sit amet. Donec ac commodo enim, eget mattis ipsum.</p>
+                  <p>In vestibulum vestibulum suscipit. Phasellus velit felis, imperdiet quis dolor ut, aliquet iaculis mauris. Pellentesque consectetur placerat suscipit. Donec quis hendrerit eros. Mauris sed leo aliquet, feugiat magna et, feugiat mauris. Integer a nunc eu risus ultrices euismod. Pellentesque at dictum turpis. Fusce sed mauris lorem. Nam condimentum odio diam, vitae congue sapien mollis vitae. Pellentesque nulla est, dapibus finibus sapien in, euismod dapibus diam.</p>
+                  <p>In dictum, magna non suscipit volutpat, ligula ligula scelerisque purus, et dapibus ipsum enim quis nisi. Sed eget faucibus velit. Integer in felis consequat, aliquam neque vitae, pellentesque nibh. Donec id lobortis risus, at finibus tortor. Praesent consequat elementum tristique. Sed dictum quis magna a consequat. Maecenas id malesuada sem. Phasellus pharetra odio purus, sit amet commodo tortor mollis ac. Donec gravida aliquet tellus.</p>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-offset-10 col-md-2" style="text-align: right;">
+                  <router-link to="/">
+                    <button class="md-btn--info md-btn--round">Back</button>
+                  </router-link>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+  
+  `
+});
+
+const CatchTheBirdComponent = Vue.component('catch-the-bird', {
+  template: `
+    <div class="wil-content">
+        <section class="awe-section">
+          <div class="container">
+            <div class="page-title pb-40">
+              <h2 class="page-title__title">Catch the bird</h2>
+              <div class="post-detail__meta">
+                <span class="author">by Agata Leś</span>
+              </div>
+              <div class="page-title__divider"></div>
+            </div>            
+          </div>
+        </section>
+        <section class="awe-section bg-gray">
+          <div class="container">
+            <div>
+              <div class="post-detail__media">
+                <img src="https://picsum.photos/id/30/1600/768" class="img-responsive" alt=""/>
+              </div>
+              <div class="post-detail__entry row">
+                <div class="col-md-12">
+                  <h5>Vivamus eget vulputate risus. Aliquam id fringilla lacus, vitae maximus felis. Suspendisse in posuere urna. Ut ipsum nisi, suscipit at nisl nec, pulvinar dapibus risus. Etiam non hendrerit nulla, in volutpat dui.</h5>
+                  <p>In nec porttitor nisi. Nunc at egestas ante. Sed vestibulum velit eu nibh commodo, non fermentum libero pellentesque. Fusce sed posuere ex, non ultrices nibh. <b>Fusce quis leo non ex rutrum convallis non ut ante.</b> Phasellus hendrerit ante nec est porta, et elementum massa euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et quam facilisis, posuere justo ut, maximus nulla. Quisque id fermentum tortor. Duis sem mi, luctus sed luctus eget, viverra et ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec faucibus imperdiet porttitor. Etiam fringilla ligula et porttitor tristique.</p>
+                
+                  <p>Donec quis molestie magna. Sed mattis ac nunc sit amet scelerisque. Curabitur a aliquam sem. Suspendisse condimentum elementum eros, a vehicula tortor ornare sit amet. Donec ac commodo enim, eget mattis ipsum.</p>
+                  <p>In vestibulum vestibulum suscipit. Phasellus velit felis, imperdiet quis dolor ut, aliquet iaculis mauris. Pellentesque consectetur placerat suscipit. Donec quis hendrerit eros. Mauris sed leo aliquet, feugiat magna et, feugiat mauris. Integer a nunc eu risus ultrices euismod. Pellentesque at dictum turpis. Fusce sed mauris lorem. Nam condimentum odio diam, vitae congue sapien mollis vitae. Pellentesque nulla est, dapibus finibus sapien in, euismod dapibus diam.</p>
+                  <p>In dictum, magna non suscipit volutpat, ligula ligula scelerisque purus, et dapibus ipsum enim quis nisi. Sed eget faucibus velit. Integer in felis consequat, aliquam neque vitae, pellentesque nibh. Donec id lobortis risus, at finibus tortor. Praesent consequat elementum tristique. Sed dictum quis magna a consequat. Maecenas id malesuada sem. Phasellus pharetra odio purus, sit amet commodo tortor mollis ac. Donec gravida aliquet tellus.</p>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-offset-10 col-md-2" style="text-align: right;">
+                  <router-link to="/">
+                    <button class="md-btn--info md-btn--round">Back</button>
+                  </router-link>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+  `
+});
+
+const DrLivingstoneIPresumeComponent = Vue.component('dr-livingstone-i-presume', {
+  template: `
+    <div class="wil-content">
+        <section class="awe-section">
+          <div class="container">
+            <div class="page-title pb-40">
+              <h2 class="page-title__title">Dr Livingstone, I Presume?</h2>
+              <div class="post-detail__meta">
+                <span class="author">by Agata Leś</span>
+              </div>
+              <div class="page-title__divider"></div>
+            </div>            
+          </div>
+        </section>
+        <section class="awe-section bg-gray">
+          <div class="container">
+            <div>
+              <div class="post-detail__media">
+                <img src="https://picsum.photos/id/40/1600/768" class="img-responsive" alt=""/>
+              </div>
+              <div class="post-detail__entry row">
+                <div class="col-md-12">
+                  <h5>Vivamus eget vulputate risus. Aliquam id fringilla lacus, vitae maximus felis. Suspendisse in posuere urna. Ut ipsum nisi, suscipit at nisl nec, pulvinar dapibus risus. Etiam non hendrerit nulla, in volutpat dui.</h5>
+                  <p>In nec porttitor nisi. Nunc at egestas ante. Sed vestibulum velit eu nibh commodo, non fermentum libero pellentesque. Fusce sed posuere ex, non ultrices nibh. <b>Fusce quis leo non ex rutrum convallis non ut ante.</b> Phasellus hendrerit ante nec est porta, et elementum massa euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et quam facilisis, posuere justo ut, maximus nulla. Quisque id fermentum tortor. Duis sem mi, luctus sed luctus eget, viverra et ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec faucibus imperdiet porttitor. Etiam fringilla ligula et porttitor tristique.</p>
+                
+                  <p>Donec quis molestie magna. Sed mattis ac nunc sit amet scelerisque. Curabitur a aliquam sem. Suspendisse condimentum elementum eros, a vehicula tortor ornare sit amet. Donec ac commodo enim, eget mattis ipsum.</p>
+                  <p>In vestibulum vestibulum suscipit. Phasellus velit felis, imperdiet quis dolor ut, aliquet iaculis mauris. Pellentesque consectetur placerat suscipit. Donec quis hendrerit eros. Mauris sed leo aliquet, feugiat magna et, feugiat mauris. Integer a nunc eu risus ultrices euismod. Pellentesque at dictum turpis. Fusce sed mauris lorem. Nam condimentum odio diam, vitae congue sapien mollis vitae. Pellentesque nulla est, dapibus finibus sapien in, euismod dapibus diam.</p>
+                  <p>In dictum, magna non suscipit volutpat, ligula ligula scelerisque purus, et dapibus ipsum enim quis nisi. Sed eget faucibus velit. Integer in felis consequat, aliquam neque vitae, pellentesque nibh. Donec id lobortis risus, at finibus tortor. Praesent consequat elementum tristique. Sed dictum quis magna a consequat. Maecenas id malesuada sem. Phasellus pharetra odio purus, sit amet commodo tortor mollis ac. Donec gravida aliquet tellus.</p>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-offset-10 col-md-2" style="text-align: right;">
+                  <router-link to="/">
+                    <button class="md-btn--info md-btn--round">Back</button>
+                  </router-link>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+  `
+});
+
 const routes = [
-    {path: '/', component: PagePortfolioComponent},
-    {path: '/about', component: PageAboutComponent},
-    {path: '/contact', component: PageContactComponent},
+  {path: '/', component: PagePortfolioComponent},
+  {path: '/about', component: PageAboutComponent},
+  {path: '/contact', component: PageContactComponent},
+  {path: '/tank-obsession', component: TankObsessionComponent},
+  {path: '/jasper-runner', component: JasperRunnerComponent},
+  {path: '/catch-the-bird', component: CatchTheBirdComponent},
+  {path: '/dr-livingstone-i-presume', component: DrLivingstoneIPresumeComponent},
 ];
 
 const router = new window.VueRouter({
