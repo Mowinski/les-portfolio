@@ -97,22 +97,18 @@ var PageAboutComponent = Vue.component('page-about', {
 							<div class="col-md-6 col-lg-5 "><img src="https://images.pexels.com/photos/797558/pexels-photo-797558.jpeg?w=1260&amp;h=750&amp;auto=compress&amp;cs=tinysrgb" alt="">
 							</div>
 							<div class="col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1 ">
-								
-								<!--  -->
 								<div class="mt-30">
 									<h2 class="about__title">Agata Leś</h2>
 									<p class="about__subtitle">Just Keep Scrolling! How To Design Lengthy, Lengthy Pages</p>
 									<p class="about__text">Maecenas lorem ex, euismod eget pulvinar non, facilisis ut leo. Quisque placerat purus in neque efficitur ornare. Nam at justo magna. Aliquam venenatis odio ante, non euismod augue porttitor eget. Maecenas nec viverra eros, eget euismod felis. Integer cursus libero sed lorem euismod, vel iaculis felis placerat. Pellentesque augue lacus, sodales et eros sed, molestie rhoncus ligula. Vivamus sed massa lorem. Suspendisse mollis lectus nec ex fermentum, in consectetur dolor egestas. Phasellus quis ipsum quis nisl ultricies sollicitudin id in dolor. Proin at consequat dui.</p>
-									
-									<!-- progress -->
+
 									<div class="progress" v-for="skill in skills">
 										<h5 class="progress__title">{{ skill.name }}</h5>
 										<div class="progress__wrap">
 											<div class="progress__bar" v-bind:data-progress-percent="skill.progress" data-timing="ease" data-duration="1000" data-delay="0"></div><span class="progress__number">{{ skill.progress }}%</span>
 										</div>
-									</div><!-- End / progress -->	
-								</div><!-- End /  -->
-								
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -206,7 +202,7 @@ Vue.component('contact-form', {
                   <div class="contact__text"><a href="mailto:hello@agatales.pl">hello@agatales.pl</a></div>
                 </div>
               </div>
-              <div class="col-md-7 col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1">
+              <div class="col-md-7 col-lg-8 col-sm-12 col-xs-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1">
                 <div v-if="isError" class="bg-danger">
                     Ups... something went wrong. Please use the email address on the left.
                   </div>
@@ -262,7 +258,7 @@ Vue.component('portfolio-entry', {
                 <div class="row" style="margin-top: 1rem; margin-bottom: 1rem">
                     <div class="col-md-offset-10 col-md-2" style="text-align: right;">
 							          <router-link v-bind:to="entryUrl">
-                            <button class="btn md-btn--primary">Read more</button>
+                            <!--<button class="btn md-btn--primary">Read more</button>-->
                         </router-link>
                     </div>
                 </div>
@@ -383,7 +379,7 @@ Vue.component('page-footer', {
   `
 });
 
-const TankObsessionComponent = Vue.component('tank-obsession', {
+const ToyTanksBattleComponent = Vue.component('toy-tanks-battle', {
   template: `
       <div class="wil-content">
         <section class="awe-section">
@@ -476,7 +472,7 @@ const JasperRunnerComponent = Vue.component('jasper-runner', {
   `
 });
 
-const CatchTheBirdComponent = Vue.component('catch-the-bird', {
+const CatchTheDuckComponent = Vue.component('catch-the-duck', {
   template: `
     <div class="wil-content">
         <section class="awe-section">
@@ -572,9 +568,9 @@ const routes = [
   {path: '/', component: PagePortfolioComponent},
   {path: '/about', component: PageAboutComponent},
   {path: '/contact', component: PageContactComponent},
-  {path: '/tank-obsession', component: TankObsessionComponent},
+  {path: '/toy-tanks-battle', component: ToyTanksBattleComponent},
   {path: '/jasper-runner', component: JasperRunnerComponent},
-  {path: '/catch-the-bird', component: CatchTheBirdComponent},
+  {path: '/catch-the-duck', component: CatchTheDuckComponent},
   {path: '/dr-livingstone-i-presume', component: DrLivingstoneIPresumeComponent},
 ];
 

@@ -495,7 +495,7 @@ select2, textarea, select, product__number:not([type="text"]) {
     padding: 0 15px;
     line-height: 48px;
     border: 1px solid #ebebeb;
-    color: #c0c0c0;
+    color: black;
     font-size: 14px;
     vertical-align: middle;
     height: 50px;
