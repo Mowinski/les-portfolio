@@ -154,7 +154,7 @@ Vue.component('contact-form', {
     methods: {
         submit(e) {
             this.isSending = true;
-            var url = 'https://agatales.pl/mail';
+            var url = 'https://utils.agatales.pl/mail';
             var data = {
               "from": this.email,
               "subject": this.subject,
