@@ -1,15 +1,15 @@
 [
   {
     "images": [
-      {"thumbnail": "/assets/images/tank/BattleTank1_front_thumb.png", "image": "/assets/images/tank/BattleTank1_front.png", "caption": ""},
-      {"thumbnail": "/assets/images/tank/BattleTank5_front_thumb.png", "image": "/assets/images/tank/BattleTank5_front.png", "caption": ""},
-      {"thumbnail": "/assets/images/tank/BattleTank7_front_thumb.png", "image": "/assets/images/tank/BattleTank7_front.png", "caption": ""},
-      {"thumbnail": "/assets/images/tank/BattleTank8_front_thumb.png", "image": "/assets/images/tank/BattleTank8_front.png", "caption": ""}
+      {"thumbnail": "/assets/images/livingstone/Livingstone1_thumb.png", "image": "/assets/images/livingstone/Livingstone1.png", "caption": ""},
+      {"thumbnail": "/assets/images/livingstone/Livingstone2_thumb.png", "image": "/assets/images/livingstone/Livingstone2.png", "caption": ""},
+      {"thumbnail": "/assets/images/livingstone/Livingstone3_thumb.png", "image": "/assets/images/livingstone/Livingstone3.png", "caption": ""},
+      {"thumbnail": "/assets/images/livingstone/Livingstone4_thumb.png", "image": "/assets/images/livingstone/Livingstone4.png", "caption": ""}
     ],
-    "movie": "https://www.youtube.com/embed/MX8LbeUqEI0",
-    "title": "Toy Tanks Battle",
-    "url": "toy-tanks-battle",
-    "shortDescription": "<p>A Toy Tank simulator where you and your opponent are placed in a battle arena and try to simply hit the opposite tank as many times as possible and at the same time avoid being shot. Programmed in Unreal Engine 4 using C++ with little support of Blueprints to avoid hardcoding actors' names.</p><p>Movement, shooting and basic AI were implemented. AI tanks use NavMesh to follow the Player and inside logic to shoot efficiently. A player plays his tank as he likes :) Arena was sculptured with UE Landscape Tools. Particles were modified from UE basic content.</p>"
+    "movie": "https://www.youtube.com/embed/GQPHT1k1EJY",
+    "title": "Dr Livingstone, I Presume?",
+    "url": "dr-livingstone-i-presume",
+    "shortDescription": "<p>Dr. Livingstone, I presume? is a Premium Indie title where I have the pleasure to be a gameplay programmer, but also a co-founder. It is an escape room adventure placed in XIXth century Africa. Henry Stanley is sent to find missing explorer - Dr. Livingstone. He arrives at his house in Ujiji and enters in hope to find him and return home.</p><p>Game is built entirely in Unreal Engine 4 (both C++ and Blueprints were used). Working as a gameplay programmer requires (till now) prototyping and implementing mechanics for puzzles, movement, grabbing and throwing objects, opening doors and drawers, etc. I work closely with game designers to ensure my work reflects their ideas (or not ;)) and with 3D artists. UI implementation is also part of my job.</p><p>One of my duties is also fixing reported bugs. I provided some help in physics adjustment in the engine as well.</p>"
   },
   {
     "images": [
@@ -25,26 +25,26 @@
   },
   {
     "images": [
-      {"thumbnail": "https://picsum.photos/id/30/250/180", "image": "https://picsum.photos/id/30/800/600", "caption": "Lorem ipsum"},
-      {"thumbnail": "https://picsum.photos/id/31/250/180", "image": "https://picsum.photos/id/31/800/600", "caption": "Dolor sit"},
-      {"thumbnail": "https://picsum.photos/id/32/250/180", "image": "https://picsum.photos/id/32/800/600", "caption": "Amet"},
-      {"thumbnail": "https://picsum.photos/id/33/250/180", "image": "https://picsum.photos/id/33/800/600", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in est vitae lacus volutpat fringilla et mollis ante"}
+      {"thumbnail": "/assets/images/tank/BattleTank1_front_thumb.png", "image": "/assets/images/tank/BattleTank1_front.png", "caption": ""},
+      {"thumbnail": "/assets/images/tank/BattleTank5_front_thumb.png", "image": "/assets/images/tank/BattleTank5_front.png", "caption": ""},
+      {"thumbnail": "/assets/images/tank/BattleTank7_front_thumb.png", "image": "/assets/images/tank/BattleTank7_front.png", "caption": ""},
+      {"thumbnail": "/assets/images/tank/BattleTank8_front_thumb.png", "image": "/assets/images/tank/BattleTank8_front.png", "caption": ""}
     ],
-    "movie": "https://www.youtube.com/embed/Dy6MpsDPKts",
-    "title": "Catch The Duck",
-    "url": "catch-the-duck",
-    "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in est vitae lacus volutpat fringilla et mollis ante. Donec rutrum vestibulum quam, a sodales ex ultricies vel. Integer lacinia, odio quis pharetra commodo, leo risus vehicula velit, cursus aliquam tellus neque nec risus. Ut mauris ex, consequat quis ultrices ut, rhoncus nec diam.<br>Aliquam condimentum malesuada risus, ac vehicula orci ultrices id. Nam mattis tellus eu gravida faucibus. Proin sit amet tempus ipsum. Nam fermentum egestas lorem vehicula scelerisque.\n                        Vestibulum condimentum feugiat metus, id posuere risus venenatis in. Vestibulum sit amet hendrerit sapien. In a nunc nec ante bibendum aliquam. Nunc eget turpis quis ex consectetur tincidunt sed ac dui. Nunc id massa nibh. Nulla cursus, lorem volutpat congue interdum, enim elit placerat enim, in maximus lorem neque ac purus. Etiam tempus consequat massa, sit amet sagittis libero commodo ut. Nullam vel turpis bibendum, fermentum enim ut, vestibulum magna. Integer non gravida tortor. Nunc ut lacinia ipsum, vel vestibulum sapien. Fusce quam ex, congue id egestas ut, tincidunt vel tortor. Donec commodo posuere tortor. Aliquam fringilla rhoncus diam. Maecenas at auctor neque, vel molestie diam. Etiam blandit aliquet porttitor. Nam pretium sed felis eget blandit."
+    "movie": "https://www.youtube.com/embed/MX8LbeUqEI0",
+    "title": "Toy Tanks Battle",
+    "url": "toy-tanks-battle",
+    "shortDescription": "<p>A Toy Tank simulator where you and your opponent are placed in a battle arena and try to simply hit the opposite tank as many times as possible and at the same time avoid being shot. Programmed in Unreal Engine 4 using C++ with little support of Blueprints to avoid hardcoding actors' names.</p><p>Movement, shooting and basic AI were implemented. AI tanks use NavMesh to follow the Player and inside logic to shoot efficiently. A player plays his tank as he likes :) Arena was sculptured with UE Landscape Tools. Particles were modified from UE basic content.</p>"
   },
   {
     "images": [
-      {"thumbnail": "https://picsum.photos/id/40/250/180", "image": "https://picsum.photos/id/40/800/600", "caption": "Lorem ipsum"},
-      {"thumbnail": "https://picsum.photos/id/41/250/180", "image": "https://picsum.photos/id/41/800/600", "caption": "Dolor sit"},
-      {"thumbnail": "https://picsum.photos/id/42/250/180", "image": "https://picsum.photos/id/42/800/600", "caption": "Amet"},
-      {"thumbnail": "https://picsum.photos/id/43/250/180", "image": "https://picsum.photos/id/43/800/600", "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in est vitae lacus volutpat fringilla et mollis ante"}
+      {"thumbnail": "/assets/images/catch-the-bird/CatchTheBird1_thumb.png", "image": "/assets/images/catch-the-bird/CatchTheBird1.png", "caption": ""},
+      {"thumbnail": "/assets/images/catch-the-bird/CatchTheBird2_thumb.png", "image": "/assets/images/catch-the-bird/CatchTheBird2.png", "caption": ""},
+      {"thumbnail": "/assets/images/catch-the-bird/CatchTheBird3_thumb.png", "image": "/assets/images/catch-the-bird/CatchTheBird3.png", "caption": ""},
+      {"thumbnail": "/assets/images/catch-the-bird/CatchTheBird4_thumb.png", "image": "/assets/images/catch-the-bird/CatchTheBird4.png", "caption": ""}
     ],
-    "movie": "https://www.youtube.com/embed/7MyfeeSsFGk",
-    "title": "Dr Livingstone, I Presume?",
-    "url": "dr-livingstone-i-presume",
-    "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in est vitae lacus volutpat fringilla et mollis ante. Donec rutrum vestibulum quam, a sodales ex ultricies vel. Integer lacinia, odio quis pharetra commodo, leo risus vehicula velit, cursus aliquam tellus neque nec risus. Ut mauris ex, consequat quis ultrices ut, rhoncus nec diam.<br>Aliquam condimentum malesuada risus, ac vehicula orci ultrices id. Nam mattis tellus eu gravida faucibus. Proin sit amet tempus ipsum. Nam fermentum egestas lorem vehicula scelerisque.\n                        Vestibulum condimentum feugiat metus, id posuere risus venenatis in. Vestibulum sit amet hendrerit sapien. In a nunc nec ante bibendum aliquam. Nunc eget turpis quis ex consectetur tincidunt sed ac dui. Nunc id massa nibh. Nulla cursus, lorem volutpat congue interdum, enim elit placerat enim, in maximus lorem neque ac purus. Etiam tempus consequat massa, sit amet sagittis libero commodo ut. Nullam vel turpis bibendum, fermentum enim ut, vestibulum magna. Integer non gravida tortor. Nunc ut lacinia ipsum, vel vestibulum sapien. Fusce quam ex, congue id egestas ut, tincidunt vel tortor. Donec commodo posuere tortor. Aliquam fringilla rhoncus diam. Maecenas at auctor neque, vel molestie diam. Etiam blandit aliquet porttitor. Nam pretium sed felis eget blandit."
+    "movie": "https://www.youtube.com/embed/2Pk6EP_B3S0",
+    "title": "Catch The Duck",
+    "url": "catch-the-duck",
+    "shortDescription": "<p>Game created some time ago using the DirectX 9 SDK. Made me appreciate game engines :)</p><p>The goal of the game is to catch four birds (yellow ball), the next bird spawns randomly in the city after the previous one is hit. Height and number of buildings are generated from a file. Birds AI fly around the city using Blackboards. Collisions were built from scratch. The bullet physics were designed and implemented with pure math and Newton physics. Skybox and some textures were added for more pleasant gameplay. The game produces a verbose log file.</p>"
   }
 ]

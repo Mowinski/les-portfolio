@@ -44,7 +44,7 @@ var PageAboutComponent = Vue.component('page-about', {
            {name: "Game Design", progress: 33},
            {name: "Testing", progress: 67},
            {name: "3D Graphic", progress: 12},
-           {name: "Shader", progress: 24},
+           {name: "Shader", progress: 50},
        ]
     }),
     mounted() {
@@ -83,7 +83,7 @@ var PageAboutComponent = Vue.component('page-about', {
             this.destroy();
           }, {
             offset: function offset() {
-              return Waypoint.viewportHeight() - _self.outerHeight() - 150;
+              return Waypoint.viewportHeight() - _self.outerHeight() - 100;
             }
           });
         });
@@ -99,9 +99,8 @@ var PageAboutComponent = Vue.component('page-about', {
 							<div class="col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1 ">
 								<div class="mt-30">
 									<h2 class="about__title">Agata Leś</h2>
-									<p class="about__subtitle">Just Keep Scrolling! How To Design Lengthy, Lengthy Pages</p>
-									<p class="about__text">Maecenas lorem ex, euismod eget pulvinar non, facilisis ut leo. Quisque placerat purus in neque efficitur ornare. Nam at justo magna. Aliquam venenatis odio ante, non euismod augue porttitor eget. Maecenas nec viverra eros, eget euismod felis. Integer cursus libero sed lorem euismod, vel iaculis felis placerat. Pellentesque augue lacus, sodales et eros sed, molestie rhoncus ligula. Vivamus sed massa lorem. Suspendisse mollis lectus nec ex fermentum, in consectetur dolor egestas. Phasellus quis ipsum quis nisl ultricies sollicitudin id in dolor. Proin at consequat dui.</p>
-
+									<p class="about__subtitle">Gameplay programmer</p>
+									<p class="about__text color-white">Maecenas lorem ex, euismod eget pulvinar non, facilisis ut leo. Quisque placerat purus in neque efficitur ornare. Nam at justo magna. Aliquam venenatis odio ante, non euismod augue porttitor eget. Maecenas nec viverra eros, eget euismod felis. Integer cursus libero sed lorem euismod, vel iaculis felis placerat. Pellentesque augue lacus, sodales et eros sed, molestie rhoncus ligula. Vivamus sed massa lorem. Suspendisse mollis lectus nec ex fermentum, in consectetur dolor egestas. Phasellus quis ipsum quis nisl ultricies sollicitudin id in dolor. Proin at consequat dui.</p>
 									<div class="progress" v-for="skill in skills">
 										<h5 class="progress__title">{{ skill.name }}</h5>
 										<div class="progress__wrap">
@@ -133,7 +132,7 @@ Vue.component('contact-header', {
       <div class="container">
         <div class="page-title pb-40">
           <h2 class="page-title__title">Get in touch</h2>
-          <p class="page-title__text">Curabitur elementum urna augue, eu porta</p>
+          <p class="page-title__text">Don't forget to leave high five</p>
           <div class="page-title__divider"></div>
         </div>
       </div>
