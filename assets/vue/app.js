@@ -94,13 +94,14 @@ var PageAboutComponent = Vue.component('page-about', {
     		<section class="awe-section bg-gray">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-6 col-lg-5 "><img src="https://images.pexels.com/photos/797558/pexels-photo-797558.jpeg?w=1260&amp;h=750&amp;auto=compress&amp;cs=tinysrgb" alt="">
+							<div class="col-md-6 col-lg-5 ">
+                <img style="max-width: 82%;" src="/assets/images/portait.jpg" alt="Agata Leś">
 							</div>
 							<div class="col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1 ">
 								<div class="mt-30">
 									<h2 class="about__title">Agata Leś</h2>
 									<p class="about__subtitle">Gameplay programmer</p>
-									<p class="about__text color-white">Maecenas lorem ex, euismod eget pulvinar non, facilisis ut leo. Quisque placerat purus in neque efficitur ornare. Nam at justo magna. Aliquam venenatis odio ante, non euismod augue porttitor eget. Maecenas nec viverra eros, eget euismod felis. Integer cursus libero sed lorem euismod, vel iaculis felis placerat. Pellentesque augue lacus, sodales et eros sed, molestie rhoncus ligula. Vivamus sed massa lorem. Suspendisse mollis lectus nec ex fermentum, in consectetur dolor egestas. Phasellus quis ipsum quis nisl ultricies sollicitudin id in dolor. Proin at consequat dui.</p>
+									<p class="about__text">I am a gameplay programmer experienced with Unreal Engine C++ and Blueprints. I am currently involved in an indie game project "Dr Livingstone, I presume?" where I apply my ability to prototype and implement game mechanics. I have strong math skills and a game designing background - I have contributed as a game designer and a level designer from the beginning of Dr Livingstone.</p>
 									<div class="progress" v-for="skill in skills">
 										<h5 class="progress__title">{{ skill.name }}</h5>
 										<div class="progress__wrap">
@@ -263,10 +264,10 @@ Vue.component('portfolio-entry', {
                 </div>
                 
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 md-mb-20">
                         <iframe width="100%" height="400px" v-bind:src="entryMovie" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                         <div class="row" style="height: 100%">
                             <div class="col-md-6 image-entry">
                                 <a v-bind:href="entryImages[0].image" v-bind:data-lightbox="'lightbox-' + entryId" v-bind:data-title="entryImages[0].caption">
