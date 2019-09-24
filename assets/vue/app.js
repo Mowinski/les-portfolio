@@ -15,7 +15,7 @@ var PagePortfolioComponent = Vue.component('page-portfolio', {
               .then(data => {
                 this.entries = data;
                 this.loading = false;
-            });
+              });
         }
     },
     template: `
@@ -111,9 +111,49 @@ var PageAboutComponent = Vue.component('page-about', {
 								</div>
 							</div>
 						</div>
+
+            <about-entries/>
+
 					</div>
         </section>
       </div>
+    `
+});
+
+
+Vue.component('about-entries', {
+   data: () => ({
+       photos: [
+           {image: "/assets/images/about/about12.jpg", thumbnail: "/assets/images/about/about12.jpg", caption: "Game Design Certificate - five courses, many hours of work - great satisfaction"},
+           {image: "/assets/images/about/about6.jpg", thumbnail: "/assets/images/about/about6.jpg", caption: "Event Storming Session for Dr Livingstone, I Presume?"},
+           {image: "/assets/images/about/about5.jpg", thumbnail: "/assets/images/about/about5.jpg", caption: "Unreal Go! Workshop - official advertisement"},
+           {image: "/assets/images/about/about2.jpg", thumbnail: "/assets/images/about/about2.jpg", caption: "Unreal Go! First day of workshop"},
+           {image: "/assets/images/about/about3.jpg", thumbnail: "/assets/images/about/about3.jpg", caption: "Unreal Go! Second day of workshop"},
+           {image: "/assets/images/about/about4.jpg", thumbnail: "/assets/images/about/about4.jpg", caption: "All Unreal Go! participants"},
+           {image: "/assets/images/about/about1.jpg", thumbnail: "/assets/images/about/about1.jpg", caption: "Unreal Go! First steps"},
+           {image: "/assets/images/about/about7.jpg", thumbnail: "/assets/images/about/about7.jpg", caption: "Python Has Power - Certificate"},
+           {image: "/assets/images/about/about14.jpg", thumbnail: "/assets/images/about/about14.jpg", caption: "Zumba and me practicing together"},
+           {image: "/assets/images/about/about10.jpg", thumbnail: "/assets/images/about/about10.jpg", caption: "Digital Dragons Academy - Game Design"},
+           {image: "/assets/images/about/about9.jpg", thumbnail: "/assets/images/about/about9.jpg", caption: "Digital Dragons Academy - Game Design second part"},
+           {image: "/assets/images/about/about11.jpg", thumbnail: "/assets/images/about/about11.jpg", caption: "Digital Dragons Academy - Art In Games"},
+       ]
+    }),
+    template: `
+        <section class="awe-section bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row" style="height: 100%">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mt-20 text-center" v-for="photo in photos">
+                                <a v-bind:href="photo.image" v-bind:data-lightbox="'lightbox-gallery'" v-bind:data-title="photo.caption">
+                                    <img v-bind:src="photo.thumbnail" v-bind:alt="photo.caption"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     `
 });
 
