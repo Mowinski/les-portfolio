@@ -1,15 +1,27 @@
 [
   {
     "images": [
+      {"thumbnail": "/assets/images/dying-light-2/dying-light-2-4-thumb.png", "image": "/assets/images/dying-light-2/dying-light-2-4.png", "caption": ""},
+      {"thumbnail": "/assets/images/dying-light-2/dying-light-2-1-thumb.png", "image": "/assets/images/dying-light-2/dying-light-2-1.png", "caption": ""},
+      {"thumbnail": "/assets/images/dying-light-2/dying-light-2-2-thumb.png", "image": "/assets/images/dying-light-2/dying-light-2-2.png", "caption": ""},
+      {"thumbnail": "/assets/images/dying-light-2/dying-light-2-3-thumb.png", "image": "/assets/images/dying-light-2/dying-light-2-3.png", "caption": ""}
+    ],
+    "movie": "https://www.youtube.com/embed/uy6ne-fEsAw",
+    "title": "Dying Light 2",
+    "url": "dying-light-2",
+    "shortDescription": "<p>Dying Light 2 is an AAA computer game combining the genres of an action role-playing game and survival horror.</p><p>I joined the team as a gameplay developer and have been supporting the UI team since last year. My responsibilities include maintaining existing systems, writing new features, fixing bugs, optimizing and working with a team of game and UI designers.</p><p><a href=\"https://dyinglightgame.com/\" target=\"_blank\">Release date: TBA</a></p>"
+  },
+  {
+    "images": [
       {"thumbnail": "/assets/images/livingstone/Livingstone1_thumb.png", "image": "/assets/images/livingstone/Livingstone1.png", "caption": ""},
       {"thumbnail": "/assets/images/livingstone/Livingstone2_thumb.png", "image": "/assets/images/livingstone/Livingstone2.png", "caption": ""},
       {"thumbnail": "/assets/images/livingstone/Livingstone3_thumb.png", "image": "/assets/images/livingstone/Livingstone3.png", "caption": ""},
       {"thumbnail": "/assets/images/livingstone/Livingstone4_thumb.png", "image": "/assets/images/livingstone/Livingstone4.png", "caption": ""}
     ],
-    "movie": "https://www.youtube.com/embed/GQPHT1k1EJY",
+    "movie": "https://www.youtube.com/embed/4EZQD-_JaKU",
     "title": "Dr Livingstone, I Presume?",
     "url": "dr-livingstone-i-presume",
-    "shortDescription": "<p>Dr. Livingstone, I presume? is a Premium Indie title where I have the pleasure to be a gameplay programmer, but also a co-founder. It is an escape room adventure placed in XIXth century Africa. Henry Stanley is sent to find missing explorer - Dr. Livingstone. He arrives at his house in Ujiji and enters in hope to find him and return home.</p><p>Game is built entirely in Unreal Engine 4 (both C++ and Blueprints were used). Working as a gameplay programmer requires (till now) prototyping and implementing mechanics for puzzles, movement, grabbing and throwing objects, opening doors and drawers, etc. I work closely with game designers to ensure my work reflects their ideas (or not ;)) and with 3D artists. UI implementation is also part of my job.</p><p>One of my duties is also fixing reported bugs. I provided some help in physics adjustment in the engine as well.</p>"
+    "shortDescription": "<p>Dr. Livingstone, I suppose? is a Premium Indie title that I co-founded and still support as a developer and co-producer. It is a mix between a puzzle and FPP adventure game with a strong emphasis on the story. The action takes place in nineteenth-century Africa, when Henry Stanley is sent to search for a missing explorer - David Livingstone.</p><p>The game was built entirely in Unreal Engine 4 using C ++ and Blueprints. Working as a game programmer from the very beginning required many prototypes, especially the mechanics of individual puzzles. At the same time, I worked in a team of 2-3 people on player movement and environmental aspects - for example opening doors and drawers. One of the main pillars of the game is to reflect the player's natural movement during free exploration. Therefore, for example, cabinet doors are not opened with a click or button press, but with a mouse movement reflecting the actual movement of the hand when opening the door. Later, the basic mechanics were grouped into separate components to speed up the process of creating individual puzzles. My personal success with this project is the code architecture for UI, which solved the problems with displaying various puzzle widgets.</p><p>I work closely with game designers all the time to make sure my work is consistent with their ideas. I help them navigate the UE4 editor while tweaking parameters or testing the game.</p><p><a href=\"https://livingstone-game.com/\" target=\"_blank\">Release date on Steam: Q2 2021</a></p>"
   },
   {
     "images": [

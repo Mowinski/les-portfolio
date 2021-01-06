@@ -40,11 +40,11 @@ var PagePortfolioComponent = Vue.component('page-portfolio', {
 var PageAboutComponent = Vue.component('page-about', {
     data: () => ({
        skills: [
-           {name: "Gameplay", progress: 100},
-           {name: "Game Design", progress: 33},
+           {name: "Gameplay", progress: 90},
+           {name: "Game Design", progress: 50},
            {name: "Testing", progress: 67},
-           {name: "3D Graphic", progress: 12},
-           {name: "Shader", progress: 50},
+           {name: "3D Graphic", progress: 25},
+           {name: "Shader", progress: 35},
        ]
     }),
     mounted() {
@@ -101,7 +101,7 @@ var PageAboutComponent = Vue.component('page-about', {
 								<div class="mt-30">
 									<h2 class="about__title">Agata Leś</h2>
 									<p class="about__subtitle">Gameplay programmer</p>
-									<p class="about__text">I am a gameplay programmer experienced with Unreal Engine C++ and Blueprints. I am currently involved in an indie game project "Dr Livingstone, I presume?" where I apply my ability to prototype and implement game mechanics. I have strong math skills and a game designing background - I have contributed as a game designer and a level designer from the beginning of Dr Livingstone.</p>
+									<p class="about__text">I am a gameplay programmer experienced with Unreal Engine C++ and Blueprints. During the day I work in Techland on Dying Light 2 and at night I am involved in an indie game project "Dr Livingstone, I presume?" where I apply my ability to prototype and implement game mechanics. I have strong math skills and a game designing background - I have contributed as a game designer and a level designer from the beginning of Dr Livingstone.</p>
 									<div class="progress" v-for="skill in skills">
 										<h5 class="progress__title">{{ skill.name }}</h5>
 										<div class="progress__wrap">
@@ -129,13 +129,9 @@ Vue.component('about-entries', {
            {image: "/assets/images/about/about5.jpg", thumbnail: "/assets/images/about/about5.jpg", caption: "Unreal Go! Workshop - official advertisement"},
            {image: "/assets/images/about/about2.jpg", thumbnail: "/assets/images/about/about2.jpg", caption: "Unreal Go! First day of workshop"},
            {image: "/assets/images/about/about3.jpg", thumbnail: "/assets/images/about/about3.jpg", caption: "Unreal Go! Second day of workshop"},
-           {image: "/assets/images/about/about4.jpg", thumbnail: "/assets/images/about/about4.jpg", caption: "All Unreal Go! participants"},
+           {image: "/assets/images/about/about15.png", thumbnail: "/assets/images/about/about15.png", caption: "Witch behind camera"},
            {image: "/assets/images/about/about1.jpg", thumbnail: "/assets/images/about/about1.jpg", caption: "Unreal Go! First steps"},
-           {image: "/assets/images/about/about7.jpg", thumbnail: "/assets/images/about/about7.jpg", caption: "Python Has Power - Certificate"},
-           {image: "/assets/images/about/about14.jpg", thumbnail: "/assets/images/about/about14.jpg", caption: "Zumba and me practicing together"},
-           {image: "/assets/images/about/about10.jpg", thumbnail: "/assets/images/about/about10.jpg", caption: "Digital Dragons Academy - Game Design"},
-           {image: "/assets/images/about/about9.jpg", thumbnail: "/assets/images/about/about9.jpg", caption: "Digital Dragons Academy - Game Design second part"},
-           {image: "/assets/images/about/about11.jpg", thumbnail: "/assets/images/about/about11.jpg", caption: "Digital Dragons Academy - Art In Games"},
+           {image: "/assets/images/about/about7.jpg", thumbnail: "/assets/images/about/about7.jpg", caption: "Python Has Power - Certificate"}
        ]
     }),
     template: `
@@ -144,7 +140,7 @@ Vue.component('about-entries', {
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="row" style="height: 100%">
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mt-20 text-center" v-for="photo in photos">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mt-20 text-center" style="justify-content: center;" v-for="photo in photos">
                                 <a v-bind:href="photo.image" v-bind:data-lightbox="'lightbox-gallery'" v-bind:data-title="photo.caption">
                                     <img v-bind:src="photo.thumbnail" v-bind:alt="photo.caption"/>
                                 </a>
@@ -173,7 +169,7 @@ Vue.component('contact-header', {
       <div class="container">
         <div class="page-title pb-40">
           <h2 class="page-title__title">Get in touch</h2>
-          <p class="page-title__text">Don't forget to leave high five</p>
+          <p class="page-title__text"></p>
           <div class="page-title__divider"></div>
         </div>
       </div>
@@ -233,7 +229,7 @@ Vue.component('contact-form', {
                 </div>
                 <div class="contact">
                   <div class="contact__icon"><i class="pe-7s-back"></i></div>
-                  <h3 class="contact__title">call us</h3>
+                  <h3 class="contact__title">call me</h3>
                   <div class="contact__text"><a href="tel:+48609282420">+48 609 282 420</a></div>
                 </div>
                 <div class="contact">
