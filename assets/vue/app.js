@@ -98,8 +98,8 @@ var PageAboutComponent = Vue.component('page-about', {
     		<section class="awe-section bg-gray">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-6 col-lg-5 ">
-                <img style="max-width: 82%;" src="/assets/images/portait.jpg" alt="Agata Leś">
+							<div class="col-md-6 col-lg-5" style="justify-content: center;">
+                <img src="/assets/images/portait.jpg" alt="Agata Leś">
 							</div>
 							<div class="col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-1 ">
 								<div class="mt-30">
