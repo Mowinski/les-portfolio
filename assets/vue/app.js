@@ -619,7 +619,6 @@ const router = new window.VueRouter({
   mode: "history",
   scrollBehavior: function(to) {
     if(to.hash) {
-      console.log(to);
       return {
         selector: to.hash
       };
