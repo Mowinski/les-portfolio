@@ -41,10 +41,14 @@ var PageAboutComponent = Vue.component('page-about', {
     data: () => ({
        skills: [
            {name: "Gameplay", progress: 90},
+	   {name: "Unreal Engine", progress: 65},    
            {name: "Game Design", progress: 50},
+           {name: "UI/UX", progress: 65},           
            {name: "Testing", progress: 67},
-           {name: "3D Graphic", progress: 25},
+	   {name: "3D Graphic", progress: 25},
            {name: "Shader", progress: 35},
+	   {name: "Scrum", progress: 90},
+	   {name: "Perforce/Git", progress: 70},    
        ]
     }),
     mounted() {
